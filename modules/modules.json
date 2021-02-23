@@ -2,12 +2,11 @@
 	"version":"0.1-alpha",
 	"moduleList":[ 
 		"gh://wgytcraft/errors",
-		"bb://wgytschool/hello-world-template",
-		"local://hi"
+		"gh://wgytcraft/hello-world-template"
 	],
 	"errorHandler":"wgytcraft/errors",
 	"website":["test.wgyt.tk"],
 	"websiteData":{
-		"test.wgyt.tk":"wgytschool/hello-world-template"
+		"test.wgyt.tk":"wgytcraft/hello-world-template"
 	}
 }

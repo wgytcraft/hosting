@@ -38,7 +38,5 @@ function servesite(host, res, req, error, modules) {
 }
 http.createServer((req, res) => {
 	host = req.headers.host
-  res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end();
-	// servesite(host, res, req, error, modules, version, ejs)
+  servesite(host, res, req, error, modules, version, ejs)
 }).listen(3000);

@@ -9,6 +9,8 @@ const version = "0.1-alpha"
 for (var i = 0; i < 2; i++) {
 	// import modules from github
 	for (module of modules.moduleList) {
+	let toClone = true
+
 	  if (module.startsWith("gh://")) {
 	    url=module.replace("gh://", "git://github.com/")
 	    url=`${url}.git`
@@ -20,9 +22,16 @@ for (var i = 0; i < 2; i++) {
 			url=`https://${f[2]}@bitbucket.org/${module.replace("bb://", "")}`
 		}else if(module.startsWith("local://")){
 			url=""
+			toClone = false;
+			split = module.split('//')[0];
+			test = split.split("/").slice(0,-1)
+			dir = test[test.length - 1]
+			fs.copySync(split, `${dirname}/modules/${dir}/`, { overwrite: true });
 		}
 		directory = `${dirname}/modules/${module}`
-		clone(url, directory.replace("gh://","").replace("bb://", "").replace("gl://",""), { shallow: true }, function() { })
+		if(toClone) {
+			clone(url, directory.replace("gh://","").replace("bb://", "").replace("gl://",""), { shallow: true }, function() { })
+			    }
 	};
 }
 // set up error handler

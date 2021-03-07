@@ -1,3 +1,3 @@
 const fs = require('fs-extra');
-var test = require('./index.js');
-test.main(JSON.parse(fs.readFileSync('modules/modules.json')),__dirname)
+var {main} = require('../dist/index.js');
+main(JSON.parse(fs.readFileSync('modules/modules.json')),__dirname)

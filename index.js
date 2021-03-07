@@ -1,8 +1,8 @@
-/* dirname */
-/* modules */
+dirname=__dirname
+const fs = require('fs-extra');
+const modules = JSON.parse(fs.readFileSync('modules/modules.json'))
 const http = require('http')
 const ejs = require('ejs');
-const fs = require('fs-extra');
 var clone = require('git-clone-sync');
 console.log('starting wgytcraft website server')
 const version = "0.1-alpha"

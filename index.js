@@ -1,3 +1,4 @@
+// modules and dirname should be set here in regular version, but not in npm version
 dirname = __dirname;
 const fs = require("fs-extra");
 const modules = JSON.parse(fs.readFileSync("modules/modules.json"));
@@ -5,7 +6,8 @@ const http = require("http");
 const ejs = require("ejs");
 var clone = require("git-clone-sync");
 console.log("starting wgytcraft website server");
-const version = "0.1-alpha";
+const version = "1.0.2";
+ 
   // import modules
   for (module of modules.moduleList) {
     let toClone = true

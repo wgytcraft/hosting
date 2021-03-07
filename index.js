@@ -1,5 +1,4 @@
-/* dirname */
-/* modules */
+// modules and dirname should be set here in regular version, but not in npm version
 const http = require('http')
 const ejs = require('ejs');
 const fs = require('fs-extra');

@@ -10,7 +10,7 @@ exports.main = function (modules,dirname,port) {
 	const error = require(`${dirname}/modules/${modules.errorHandler}/index.js`); // get the error handler
 	http.createServer((req, res) => { // set up the server
 			host = req.headers.host; // this is the host
-			res.writeHeader({"X-Powered-By":"nodejs@wgytcraft/hosting"})
+			res.setHeader("X-Powered-By","nodejs@wgytcraft/hosting")
 			servesite(host, res, req, error, modules, version, eta); // serve the site
 	}).listen(port); // listen on port
 }

@@ -4,9 +4,15 @@
 		"gh://wgytcraft/errors",
 		"gh://wgytcraft/hello-world-template"
 	],
-	"errorHandler":"wgytcraft/errors",
+	"errorHandler":{
+    "module":"wgytcraft/errors",
+    "config":{}
+  },
 	"website":["test.wgyt.tk"],
 	"websiteData":{
-		"test.wgyt.tk":"wgytcraft/hello-world-template"
-	}
+		"test.wgyt.tk":{
+      "module":"wgytcraft/hello-world-template",
+      "config":{}
+	  }
+  }
 }

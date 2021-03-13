@@ -8,9 +8,9 @@
     "module":"wgytcraft/errors",
     "config":{}
   },
-	"website":["test.wgyt.tk"],
+	"website":["localhost:3000"],
 	"websiteData":{
-		"test.wgyt.tk":{
+	"localhost:3000":{
       "module":"wgytcraft/hello-world-template",
       "config":{}
 	  }

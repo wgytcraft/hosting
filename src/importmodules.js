@@ -26,12 +26,13 @@ exports.main = function(modules, dirname,clone) {
 		}
 		directory = `${dirname}/modules/${module}`;
 		if (toClone) { // clone it
-			clone(
+			async function asnc(){await clone(
 				url,
 				directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
-				{ shallow: true,sync: true },
+				{ shallow: true },
 				function() { }
-			);
+			);}
+			asnc();
 		}
 	}
 }

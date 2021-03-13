@@ -11,7 +11,7 @@ exports.main = function (modules, dirname, port) {
     http.createServer(function (req, res) {
         var host = req.headers.host; // this is the host
         res.setHeader("X-Powered-By", "nodejs@wgytcraft/hosting");
-        servesite(host, res, req, error, modules, version, ejs); // serve the site
+        servesite(host, res, req, error, modules, version, ejs, dirname); // serve the site
     }).listen(port); // listen on port
 };
 //# sourceMappingURL=index.js.map

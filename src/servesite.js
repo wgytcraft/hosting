@@ -1,4 +1,4 @@
-exports.main = function(host, res, req, error, modules, version, ejs) {
+exports.main = function(host, res, req, error, modules, version, ejs, dirname) {
   if (modules.website.includes(host) === true) { // if the site is in modulesjson 
     module = modules.websiteData[host].module;
     config = modules.websiteData[host].config;

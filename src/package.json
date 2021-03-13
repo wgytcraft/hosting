@@ -4,7 +4,6 @@
   "description": "The easiest way to host websites",
   "main": "index.js",
   "dependencies": {
-    "fs-extra": "^9.1.0",
     "git-clone-sync": "^0.1.2"
   },
   "devDependencies": {

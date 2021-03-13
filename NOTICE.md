@@ -8,11 +8,10 @@ The following 3rd-party software packages may be used by or distributed with **w
 ### Direct Dependencies
 Package|Licenses
 -------|--------
-**[ejs (3.1.6)](#ejs-3-1-6)**|Apache-2.0, MIT
 **[fs-extra (9.1.0)](#fs-extra-9-1-0)**|MIT
 **[git-clone-sync (0.1.2)](#git-clone-sync-0-1-2)**|**Multi-license:** ISC *OR* MIT
 #### Details
-##### **ejs (3.1.6)**
+##### **the ejs folder(/lib/ejs/)**
 * Declared License(s)
     * Apache-2.0
         * Attribution:

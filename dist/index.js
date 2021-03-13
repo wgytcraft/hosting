@@ -3,9 +3,9 @@ exports.main = function (modules,dirname,port) {
 	const servesite = require("./servesite.js").main // this is the function that uses the modules to serve the site
 	const fs = require("fs-extra"); // deal with files
 	const http = require("http"); // http server
-	const ejs = require("ejs"); // templating engine
+	const ejs = require("./ejs/ejs.js"); // templating engine
 	var clone = require("git-clone-sync"); // clone from git sources
-	const version = "1.0.3"; // verison number
+	const version = "1.1.0"; // verison number
 	importmodules(modules,dirname,clone); // import the modules
 	const error = require(`${dirname}/modules/${modules.errorHandler.module}/index.js`); // get the error handler
 	http.createServer((req, res) => { // set up the server

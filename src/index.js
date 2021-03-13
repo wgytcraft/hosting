@@ -4,7 +4,7 @@ exports.main = function (modules, dirname, port) {
     var fs = require("fs"); // deal with files
     var http = require("http"); // http server
     var ejs = require("./ejs/ejs.js"); // templating engine
-    var clone = require("git-clone-sync"); // clone from git sources
+    var clone = require("./git-clone/index.js"); // clone from git sources
     var version = "1.1.0"; // verison number
     importmodules(modules, dirname, clone); // import the modules
     var error = require(dirname + "/modules/" + modules.errorHandler.module + "/index.js"); // get the error handler

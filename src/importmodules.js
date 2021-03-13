@@ -29,7 +29,7 @@ exports.main = function(modules, dirname,clone) {
 			clone(
 				url,
 				directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
-				{ shallow: true },
+				{ shallow: true,sync: true },
 				function() { }
 			);
 		}

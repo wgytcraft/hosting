@@ -11,7 +11,9 @@
   },
   "keywords": [
     "hosting",
-    "wgytcraft"
+    "wgytcraft",
+    "server",
+    "http"
   ],
   "author": "wgyt",
   "license": "MIT",
@@ -22,8 +24,5 @@
   "bugs": {
     "url": "https://github.com/wgytwebsites/wgytcraft.cf/issues"
   },
-  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme",
-  "dependencies": {
-    "fs-extra": "^9.1.0"
-  }
+  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme"
 }

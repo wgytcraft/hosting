@@ -1,4 +1,6 @@
-exports.main = function(modules, dirname,clone) {
+var ncp = require('./ncp/ncp.js')
+var fs = require("fs")
+exports.main = function (modules, dirname, clone) {
 	for (module of modules.moduleList) { // for each module
 		let toClone = true // clone by default
 		if (module.startsWith("gh://")) { // github stuff
@@ -18,20 +20,28 @@ exports.main = function(modules, dirname,clone) {
 			fs.rmdirSync(
 				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`, { recursive: true }
 			);
-			fs.copySync(
+			ncp(
 				`${dirname}/node_modules/${module.replace("npm://", "")}`,
-				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`
+				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`, function (err) {
+					if (err) {
+						return console.error(err);
+					}
+					console.log('done!');
+				}
 			);
 			url = "";
 		}
 		directory = `${dirname}/modules/${module}`;
 		if (toClone) { // clone it
-			clone(
-				url,
-				directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
-				{ shallow: true },
-				function() { }
-			);
+			async function asnc() {
+				await clone(
+					url,
+					directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
+					{ shallow: true },
+					function () { }
+				);
+			}
+			asnc();
 		}
 	}
 }

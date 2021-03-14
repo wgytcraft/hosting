@@ -101,7 +101,7 @@ exports.promiseImpl = (new Function('return this;'))().Promise;
  * @param {Boolean} [isDir=false] whether the parent file path is a directory
  * @return {String}
  */
-exports.resolveInclude = function(name, filename, isDir) {
+exports.resolveInclude = function (name, filename, isDir) {
   var dirname = path.dirname;
   var extname = path.extname;
   var resolve = path.resolve;
@@ -164,7 +164,7 @@ function getIncludePath(path, options) {
     }
     if (!includePath && typeof options.includer !== 'function') {
       throw new Error('Could not find the include file "' +
-          options.escapeFunction(path) + '"');
+        options.escapeFunction(path) + '"');
     }
   }
   return includePath;
@@ -206,7 +206,7 @@ function handleCache(options, template) {
     // istanbul ignore if: should not happen at all
     if (!filename) {
       throw new Error('Internal EJS error: no file name or template '
-                    + 'provided');
+        + 'provided');
     }
     template = fileLoader(filename).toString().replace(_BOM, '');
   }
@@ -263,7 +263,7 @@ function tryHandleCache(options, data, cb) {
  * @return {String} The contents of the specified file.
  * @static
  */
-function fileLoader(filePath){
+function fileLoader(filePath) {
   return exports.fileLoader(filePath);
 }
 /**
@@ -313,7 +313,7 @@ function rethrow(err, str, flnm, lineno, esc) {
   var end = Math.min(lines.length, lineno + 3);
   var filename = esc(flnm);
   // Error context
-  var context = lines.slice(start, end).map(function (line, i){
+  var context = lines.slice(start, end).map(function (line, i) {
     var curr = i + start + 1;
     return (curr == lineno ? ' >> ' : '    ')
       + curr
@@ -329,7 +329,7 @@ function rethrow(err, str, flnm, lineno, esc) {
 
   throw err;
 }
-function stripSemi(str){
+function stripSemi(str) {
   return str.replace(/;(\s*$)/, '$1');
 }
 /**
@@ -350,7 +350,7 @@ exports.compile = function compile(template, opts) {
   // 'scope' is 'context'
   // FIXME: Remove this in a future version
   if (opts && opts.scope) {
-    if (!scopeOptionWarned){
+    if (!scopeOptionWarned) {
       console.warn('`scope` option is deprecated and will be removed in EJS 3');
       scopeOptionWarned = true;
     }
@@ -401,7 +401,7 @@ exports.renderFile = function () {
   var args = Array.prototype.slice.call(arguments);
   var filename = args.shift();
   var cb;
-  var opts = {filename: filename};
+  var opts = { filename: filename };
   var data;
   var viewOpts;
   // Do we have a callback?
@@ -550,7 +550,7 @@ Template.prototype = {
         prepended += destructuring + ';\n';
       }
       if (opts._with !== false) {
-        prepended +=  '  with (' + opts.localsName + ' || {}) {' + '\n';
+        prepended += '  with (' + opts.localsName + ' || {}) {' + '\n';
         appended += '  }' + '\n';
       }
       appended += '  return __output;' + '\n';
@@ -594,7 +594,7 @@ Template.prototype = {
         try {
           ctor = (new Function('return (async function(){}).constructor;'))();
         }
-        catch(e) {
+        catch (e) {
           if (e instanceof SyntaxError) {
             throw new Error('This environment does not support async/await');
           }
@@ -608,7 +608,7 @@ Template.prototype = {
       }
       fn = new ctor(opts.localsName + ', escapeFn, include, rethrow', src);
     }
-    catch(e) {
+    catch (e) {
       // istanbul ignore else
       if (e instanceof SyntaxError) {
         if (opts.filename) {
@@ -647,7 +647,7 @@ Template.prototype = {
           enumerable: false,
           configurable: true
         });
-      } catch (e) {/* ignore */}
+      } catch (e) {/* ignore */ }
     }
     return returnedFn;
   },
@@ -674,7 +674,7 @@ Template.prototype = {
         // FIXME: May end up with some false positives here
         // Better to store modes as k/v with openDelimiter + delimiter as key
         // Then this can simply check against the map
-        if ( line.indexOf(o + d) === 0        // If it is a tag
+        if (line.indexOf(o + d) === 0        // If it is a tag
           && line.indexOf(o + d + d) !== 0) { // and is not escaped
           closing = matches[index + 2];
           if (!(closing == d + c || closing == '-' + d + c || closing == '_' + d + c)) {
@@ -737,74 +737,74 @@ Template.prototype = {
     var newLineCount = 0;
     newLineCount = (line.split('\n').length - 1);
     switch (line) {
-    case o + d:
-    case o + d + '_':
-      this.mode = Template.modes.EVAL;
-      break;
-    case o + d + '=':
-      this.mode = Template.modes.ESCAPED;
-      break;
-    case o + d + '-':
-      this.mode = Template.modes.RAW;
-      break;
-    case o + d + '#':
-      this.mode = Template.modes.COMMENT;
-      break;
-    case o + d + d:
-      this.mode = Template.modes.LITERAL;
-      this.source += '    ; __append("' + line.replace(o + d + d, o + d) + '")' + '\n';
-      break;
-    case d + d + c:
-      this.mode = Template.modes.LITERAL;
-      this.source += '    ; __append("' + line.replace(d + d + c, d + c) + '")' + '\n';
-      break;
-    case d + c:
-    case '-' + d + c:
-    case '_' + d + c:
-      if (this.mode == Template.modes.LITERAL) {
-        this._addOutput(line);
-      }
-      this.mode = null;
-      this.truncate = line.indexOf('-') === 0 || line.indexOf('_') === 0;
-      break;
-    default:
-      // In script mode, depends on type of tag
-      if (this.mode) {
-        // If '//' is found without a line break, add a line break.
-        switch (this.mode) {
-        case Template.modes.EVAL:
-        case Template.modes.ESCAPED:
-        case Template.modes.RAW:
-          if (line.lastIndexOf('//') > line.lastIndexOf('\n')) {
-            line += '\n';
+      case o + d:
+      case o + d + '_':
+        this.mode = Template.modes.EVAL;
+        break;
+      case o + d + '=':
+        this.mode = Template.modes.ESCAPED;
+        break;
+      case o + d + '-':
+        this.mode = Template.modes.RAW;
+        break;
+      case o + d + '#':
+        this.mode = Template.modes.COMMENT;
+        break;
+      case o + d + d:
+        this.mode = Template.modes.LITERAL;
+        this.source += '    ; __append("' + line.replace(o + d + d, o + d) + '")' + '\n';
+        break;
+      case d + d + c:
+        this.mode = Template.modes.LITERAL;
+        this.source += '    ; __append("' + line.replace(d + d + c, d + c) + '")' + '\n';
+        break;
+      case d + c:
+      case '-' + d + c:
+      case '_' + d + c:
+        if (this.mode == Template.modes.LITERAL) {
+          this._addOutput(line);
+        }
+        this.mode = null;
+        this.truncate = line.indexOf('-') === 0 || line.indexOf('_') === 0;
+        break;
+      default:
+        // In script mode, depends on type of tag
+        if (this.mode) {
+          // If '//' is found without a line break, add a line break.
+          switch (this.mode) {
+            case Template.modes.EVAL:
+            case Template.modes.ESCAPED:
+            case Template.modes.RAW:
+              if (line.lastIndexOf('//') > line.lastIndexOf('\n')) {
+                line += '\n';
+              }
+          }
+          switch (this.mode) {
+            // Just executing code
+            case Template.modes.EVAL:
+              this.source += '    ; ' + line + '\n';
+              break;
+            // Exec, esc, and output
+            case Template.modes.ESCAPED:
+              this.source += '    ; __append(escapeFn(' + stripSemi(line) + '))' + '\n';
+              break;
+            // Exec and output
+            case Template.modes.RAW:
+              this.source += '    ; __append(' + stripSemi(line) + ')' + '\n';
+              break;
+            case Template.modes.COMMENT:
+              // Do nothing
+              break;
+            // Literal <%% mode, append as raw output
+            case Template.modes.LITERAL:
+              this._addOutput(line);
+              break;
           }
         }
-        switch (this.mode) {
-        // Just executing code
-        case Template.modes.EVAL:
-          this.source += '    ; ' + line + '\n';
-          break;
-          // Exec, esc, and output
-        case Template.modes.ESCAPED:
-          this.source += '    ; __append(escapeFn(' + stripSemi(line) + '))' + '\n';
-          break;
-          // Exec and output
-        case Template.modes.RAW:
-          this.source += '    ; __append(' + stripSemi(line) + ')' + '\n';
-          break;
-        case Template.modes.COMMENT:
-          // Do nothing
-          break;
-          // Literal <%% mode, append as raw output
-        case Template.modes.LITERAL:
+        // In string mode, just add the output
+        else {
           this._addOutput(line);
-          break;
         }
-      }
-      // In string mode, just add the output
-      else {
-        this._addOutput(line);
-      }
     }
     if (self.opts.compileDebug && newLineCount) {
       this.currentLine += newLineCount;

@@ -3,9 +3,6 @@
   "version": "1.1.0",
   "description": "The easiest way to host websites",
   "main": "index.js",
-  "dependencies": {
-    "git-clone-sync": "^0.1.2"
-  },
   "devDependencies": {
     "@types/node": "^14.14.34"
   },
@@ -25,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/wgytwebsites/wgytcraft.cf/issues"
   },
-  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme"
+  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme",
+  "dependencies": {
+    "fs-extra": "^9.1.0"
+  }
 }

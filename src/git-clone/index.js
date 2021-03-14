@@ -1,6 +1,6 @@
 var spawn = require('child_process').spawn;
 
-module.exports = function(repo, targetPath, opts, cb) {
+module.exports = function (repo, targetPath, opts, cb) {
 
     if (typeof opts === 'function') {
         cb = opts;
@@ -22,12 +22,12 @@ module.exports = function(repo, targetPath, opts, cb) {
     args.push(targetPath);
 
     var process = spawn(git, args);
-    process.on('close', function(status) {
+    process.on('close', function (status) {
         if (status == 0) {
             if (opts.checkout) {
                 _checkout();
             } else {
-                cb && cb();    
+                cb && cb();
             }
         } else {
             cb && cb(new Error("'git clone' failed with status " + status));
@@ -37,7 +37,7 @@ module.exports = function(repo, targetPath, opts, cb) {
     function _checkout() {
         var args = ['checkout', opts.checkout];
         var process = spawn(git, args, { cwd: targetPath });
-        process.on('close', function(status) {
+        process.on('close', function (status) {
             if (status == 0) {
                 cb && cb();
             } else {

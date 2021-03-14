@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/wgytwebsites/wgytcraft.cf/issues"
   },
-  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme"
+  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme",
+  "dependencies": {
+    "fs-extra": "^9.1.0"
+  }
 }

@@ -1,7 +1,6 @@
 exports.main = function (modules, dirname, port) {
-    var importmodules = require("./importmodules.js").main; // this is the function that imports the modules
-    var servesite = require("./servesite.js").main; // this is the function that uses the modules to serve the site
-    var fs = require("fs"); // deal with files
+    var importmodules = require("../src/importmodules.js").main; // this is the function that imports the modules
+    var servesite = require("../src/servesite.js").main; // this is the function that uses the modules to serve the site
     var http = require("http"); // http server
     var ejs = require("./ejs/ejs.js"); // templating engine
     var clone = require("./git-clone/index.js"); // clone from git sources
@@ -12,6 +11,5 @@ exports.main = function (modules, dirname, port) {
         var host = req.headers.host; // this is the host
         res.setHeader("X-Powered-By", "nodejs@wgytcraft/hosting");
         servesite(host, res, req, error, modules, version, ejs, dirname); // serve the site
-    }).listen(port); // listen on port
+    }).listen(port);
 };
-//# sourceMappingURL=index.js.map

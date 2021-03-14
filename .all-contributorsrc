@@ -52,7 +52,11 @@
       "profile": "https://grahamsh.com",
       "contributions": [
         "code",
-        "doc"
+        "doc",
+        "bug",
+        "ideas",
+        "review",
+        "test"
       ]
     }
   ],

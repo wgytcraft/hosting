@@ -31,7 +31,10 @@ exports.main = function (modules, dirname, clone) {
     } else if (module.startsWith("npm://")) {
       // npm modules
       let toClone = false; // don't clone
-      fs.rmdirSync(`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,{ recursive: true });
+      fs.rmdirSync(
+        `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
+        { recursive: true }
+      );
       ncp(
         `${dirname}/node_modules/${module.replace("npm://", "")}`,
         `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,

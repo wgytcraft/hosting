@@ -7,9 +7,11 @@ exports.main = function (modules, dirname, port) {
   var version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
   var error = require(`${dirname}/modules/${modules.errorHandler.module}/index.js`); // get the error handler
-  http.createServer(function (req, res) {
+  http
+    .createServer(function (req, res) {
       var host = req.headers.host; // this is the host
       res.setHeader("X-Powered-By", "nodejs@wgytcraft/hosting");
       servesite(host, res, req, error, modules, version, ejs, dirname); // serve the site
-    }).listen(port);
+    })
+    .listen(port);
 };

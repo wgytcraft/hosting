@@ -7,4 +7,4 @@ exports.main = function (host, res, req, error, modules, version, ejs, dirname) 
   } else { // otherwise throw error
     error(host, res, req, 501, "site doesn't exist :(", version, ejs, modules.errorHandler.config);
   }
-}
+};

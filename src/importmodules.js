@@ -3,7 +3,7 @@ var fs = require("fs");
 exports.main = function (modules, dirname, clone) {
 	for (module of modules.moduleList) { // for each module
 		let toClone = true // clone by default
-		var url
+		var url;
 		if (module.startsWith("gh://")) { // github stuff
 			url = module.replace("gh://", "git://github.com/");
 			url = `${url}.git`;

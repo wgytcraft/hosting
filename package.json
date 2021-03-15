@@ -19,10 +19,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wgytwebsites/wgytcraft.cf.git"
+    "url": "git+https://github.com/wgytcraft/hosting.git"
   },
   "bugs": {
-    "url": "https://github.com/wgytwebsites/wgytcraft.cf/issues"
+    "url": "https://github.com/wgytcraft/hosting/issues"
   },
-  "homepage": "https://github.com/wgytwebsites/wgytcraft.cf#readme"
+  "homepage": "https://github.com/wgytcraft/hosting#readme"
 }

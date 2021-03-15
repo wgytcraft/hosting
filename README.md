@@ -10,7 +10,7 @@
 var wgytcraft = require("@wgytcraft/hosting").main;
 ```
 
-### Use it:
+### Use it
 
 ```javascript
 wgytcraft(modulesJson, dirname);
@@ -18,9 +18,9 @@ wgytcraft(modulesJson, dirname);
 // dirname should be __dirname
 ```
 
-## Folder Structure:
+## Folder Structure
 
-```
+```text
 📦 wgytcraft/hosting
  ┣ 📂 tests # Folder for tests
  ┣ 📂 dist # Actual source code

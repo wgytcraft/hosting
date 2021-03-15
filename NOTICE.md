@@ -2,7 +2,7 @@
 
 wgytcraft-hosting
 
-## Wgytcraft name, logo, and more.
+## Wgytcraft name, logo, and more
 
 The Wgytcraft Name, Logo, and other branding is owned by William Horning, but he has decided to allow use of the branding for any purpouse whatsoever as long as a link to this Github repo is provided.
 
@@ -14,7 +14,7 @@ Licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/L
 
 EJS Embedded JavaScript templates copyright 2112 mde@fleegix.org.
 
-```
+```text
 
                                  Apache License
                            Version 2.0, January 2004
@@ -221,11 +221,11 @@ EJS Embedded JavaScript templates copyright 2112 mde@fleegix.org.
 
 ### GIT-CLONE
 
-© 2014 Jason Frame [ @jaz303 / jason@onehackoranother.com ]
+© 2014 Jason Frame \[ @jaz303 / jason@onehackoranother.com ]
 
 Released under the ISC license.
 
-```
+```text
 © 2014 Jason Frame [ @jaz303 / jason@onehackoranother.com ]
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
@@ -239,7 +239,7 @@ MIT License
 
 Copyright (C) 2011 by Charlie McConnell
 
-```
+```text
 MIT License
 
 Copyright (C) 2011 by Charlie McConnell

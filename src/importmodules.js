@@ -1,5 +1,5 @@
-var ncp = require('./ncp/ncp.js')
-var fs = require("fs")
+var ncp = require('./ncp/ncp.js');
+var fs = require("fs");
 exports.main = function (modules, dirname, clone) {
 	for (module of modules.moduleList) { // for each module
 		let toClone = true // clone by default

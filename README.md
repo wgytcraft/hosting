@@ -1,26 +1,33 @@
 # @Wgytcraft/hosting - _The easiest way to host websites_
-![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwgytcraft%2Fwgytcraft-hosting.svg?type=shield) [![Open Issues](https://img.shields.io/github/issues/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/wgytcraft/hosting?color=red&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/issues?q=is%3Aissue+is%3Aclosed) ![Last Commit](https://img.shields.io/github/last-commit/wgytcraft/hosting?color=green&logo=github&logoColor=white) ![Commits Since Last Release](https://img.shields.io/github/commits-since/wgytcraft/hosting/latest?color=green&include_prereleases&label=commits%20since%20last%20release&logo=github&logoColor=white&sort=semver) [![Release](https://img.shields.io/github/v/release/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/releases) ![Downloads](https://img.shields.io/github/downloads/wgytcraft/hosting/latest/total?color=green&logo=github&logoColor=white&sort=semver) ![Repo Size](https://img.shields.io/github/repo-size/wgytcraft/hosting?color=green&logo=github&logoColor=white) [![Forks](https://img.shields.io/github/forks/wgytcraft/hosting?color=green&logo=github-actions&logoColor=white)](https://github.com/wgytcraft/hosting/network/members) [![Stars](https://img.shields.io/github/stars/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/stargazers) ![Languages](https://img.shields.io/github/languages/count/wgytcraft/hosting?color=green&logo=github&logoColor=white) ![Top Language](https://img.shields.io/github/languages/top/wgytcraft/hosting?color=green&logoColor=white) [![Licence](https://img.shields.io/github/license/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/blob/main/LICENSE) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/aa8004662996446e9dd30ff0d1c71c5b)](https://www.codacy.com/gh/wgytcraft/hosting/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=wgytcraft/hosting&amp;utm_campaign=Badge_Grade) ![All Contributors](https://img.shields.io/github/all-contributors/wgytcraft/hosting/master?color=green&logo=github&logoColor=white) [![Discord](https://img.shields.io/discord/815203873324662865?color=green&logo=discord&logoColor=white&label=discord)](https://discord.gg/NcfrvkEy6A)
+
+![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwgytcraft%2Fwgytcraft-hosting.svg?type=shield) [![Open Issues](https://img.shields.io/github/issues/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/issues) [![Closed Issues](https://img.shields.io/github/issues-closed/wgytcraft/hosting?color=red&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/issues?q=is%3Aissue+is%3Aclosed) ![Last Commit](https://img.shields.io/github/last-commit/wgytcraft/hosting?color=green&logo=github&logoColor=white) ![Commits Since Last Release](https://img.shields.io/github/commits-since/wgytcraft/hosting/latest?color=green&include_prereleases&label=commits%20since%20last%20release&logo=github&logoColor=white&sort=semver) [![Release](https://img.shields.io/github/v/release/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/releases) ![Downloads](https://img.shields.io/github/downloads/wgytcraft/hosting/latest/total?color=green&logo=github&logoColor=white&sort=semver) ![Repo Size](https://img.shields.io/github/repo-size/wgytcraft/hosting?color=green&logo=github&logoColor=white) [![Forks](https://img.shields.io/github/forks/wgytcraft/hosting?color=green&logo=github-actions&logoColor=white)](https://github.com/wgytcraft/hosting/network/members) [![Stars](https://img.shields.io/github/stars/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/stargazers) ![Languages](https://img.shields.io/github/languages/count/wgytcraft/hosting?color=green&logo=github&logoColor=white) ![Top Language](https://img.shields.io/github/languages/top/wgytcraft/hosting?color=green&logoColor=white) [![Licence](https://img.shields.io/github/license/wgytcraft/hosting?color=green&logo=github&logoColor=white)](https://github.com/wgytcraft/hosting/blob/main/LICENSE) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/aa8004662996446e9dd30ff0d1c71c5b)](https://www.codacy.com/gh/wgytcraft/hosting/dashboard?utm_source=github.com&utm_medium=referral&utm_content=wgytcraft/hosting&utm_campaign=Badge_Grade) ![All Contributors](https://img.shields.io/github/all-contributors/wgytcraft/hosting/master?color=green&logo=github&logoColor=white) [![Discord](https://img.shields.io/discord/815203873324662865?color=green&logo=discord&logoColor=white&label=discord)](https://discord.gg/NcfrvkEy6A)
+
 ## How to use
+
 ### Require the module
+
 ```javascript
-var wgytcraft = require('@wgytcraft/hosting').main
+var wgytcraft = require("@wgytcraft/hosting").main;
 ```
-### Use it: 
+
+### Use it:
+
 ```javascript
-wgytcraft(modulesJson, dirname)
+wgytcraft(modulesJson, dirname);
 // modulesJson should be the modules.json file for wgytcraft
 // dirname should be __dirname
-
 ```
+
 ## Folder Structure:
+
 ```
 📦 wgytcraft/hosting
  ┣ 📂 tests # Folder for tests
  ┣ 📂 dist # Actual source code
  ┣ 📂 .github # Community health files
- ┣ 📜 LICENSE 
+ ┣ 📜 LICENSE
  ┣ 📜 NOTICE.md
- ┗ 📜 README.md 
+ ┗ 📜 README.md
 ```
 
 ## Contributors ✨

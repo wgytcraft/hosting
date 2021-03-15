@@ -14,13 +14,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 /**
  * Private utility functions
  * @module utils
  * @private
  */
-'use strict';
+"use strict";
 var regExpChars = /[|\\{}()[\]^$+*?.]/g;
 /**
  * Escape characters reserved in regular expressions.
@@ -35,16 +35,16 @@ var regExpChars = /[|\\{}()[\]^$+*?.]/g;
 exports.escapeRegExpChars = function (string) {
   // istanbul ignore if
   if (!string) {
-    return '';
+    return "";
   }
-  return String(string).replace(regExpChars, '\\$&');
+  return String(string).replace(regExpChars, "\\$&");
 };
 var _ENCODE_HTML_RULES = {
-  '&': '&amp;',
-  '<': '&lt;',
-  '>': '&gt;',
-  '"': '&#34;',
-  "'": '&#39;'
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&#34;",
+  "'": "&#39;",
 };
 var _MATCH_HTML = /[&<>'"]/g;
 function encode_char(c) {
@@ -59,17 +59,17 @@ function encode_char(c) {
  * @type {String}
  */
 var escapeFuncStr =
-  'var _ENCODE_HTML_RULES = {\n'
-  + '      "&": "&amp;"\n'
-  + '    , "<": "&lt;"\n'
-  + '    , ">": "&gt;"\n'
-  + '    , \'"\': "&#34;"\n'
-  + '    , "\'": "&#39;"\n'
-  + '    }\n'
-  + '  , _MATCH_HTML = /[&<>\'"]/g;\n'
-  + 'function encode_char(c) {\n'
-  + '  return _ENCODE_HTML_RULES[c] || c;\n'
-  + '};\n';
+  "var _ENCODE_HTML_RULES = {\n" +
+  '      "&": "&amp;"\n' +
+  '    , "<": "&lt;"\n' +
+  '    , ">": "&gt;"\n' +
+  '    , \'"\': "&#34;"\n' +
+  '    , "\'": "&#39;"\n' +
+  "    }\n" +
+  "  , _MATCH_HTML = /[&<>'\"]/g;\n" +
+  "function encode_char(c) {\n" +
+  "  return _ENCODE_HTML_RULES[c] || c;\n" +
+  "};\n";
 /**
  * Escape characters reserved in XML.
  *
@@ -83,12 +83,11 @@ var escapeFuncStr =
  */
 exports.escapeXML = function (markup) {
   return markup == undefined
-    ? ''
-    : String(markup)
-      .replace(_MATCH_HTML, encode_char);
+    ? ""
+    : String(markup).replace(_MATCH_HTML, encode_char);
 };
 exports.escapeXML.toString = function () {
-  return Function.prototype.toString.call(this) + ';\n' + escapeFuncStr;
+  return Function.prototype.toString.call(this) + ";\n" + escapeFuncStr;
 };
 /**
  * Naive copy of properties from one object to another.
@@ -103,7 +102,7 @@ exports.escapeXML.toString = function () {
  */
 exports.shallowCopy = function (to, from) {
   from = from || {};
-  if ((to !== null) && (to !== undefined)) {
+  if (to !== null && to !== undefined) {
     for (var p in from) {
       to[p] = from[p];
     }
@@ -125,10 +124,10 @@ exports.shallowCopy = function (to, from) {
 exports.shallowCopyFromList = function (to, from, list) {
   list = list || [];
   from = from || {};
-  if ((to !== null) && (to !== undefined)) {
+  if (to !== null && to !== undefined) {
     for (var i = 0; i < list.length; i++) {
       var p = list[i];
-      if (typeof from[p] != 'undefined') {
+      if (typeof from[p] != "undefined") {
         to[p] = from[p];
       }
     }
@@ -156,7 +155,7 @@ exports.cache = {
   },
   reset: function () {
     this._data = {};
-  }
+  },
 };
 /**
  * Transforms hyphen case variable into camel case.
@@ -167,5 +166,7 @@ exports.cache = {
  * @private
  */
 exports.hyphenToCamel = function (str) {
-  return str.replace(/-[a-z]/g, function (match) { return match[1].toUpperCase(); });
+  return str.replace(/-[a-z]/g, function (match) {
+    return match[1].toUpperCase();
+  });
 };

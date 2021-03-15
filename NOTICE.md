@@ -1,12 +1,19 @@
 # Notice
+
 wgytcraft-hosting
+
 ## Wgytcraft name, logo, and more.
+
 The Wgytcraft Name, Logo, and other branding is owned by William Horning, but he has decided to allow use of the branding for any purpouse whatsoever as long as a link to this Github repo is provided.
+
 ## 3rd-Party Software for [wgytcraft-hosting]()
+
 ### EJS
+
 Licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0)
 
 EJS Embedded JavaScript templates copyright 2112 mde@fleegix.org.
+
 ```
 
                                  Apache License
@@ -211,10 +218,13 @@ EJS Embedded JavaScript templates copyright 2112 mde@fleegix.org.
    See the License for the specific language governing permissions and
    limitations under the License.
 ```
+
 ### GIT-CLONE
+
 © 2014 Jason Frame [ @jaz303 / jason@onehackoranother.com ]
 
 Released under the ISC license.
+
 ```
 © 2014 Jason Frame [ @jaz303 / jason@onehackoranother.com ]
 
@@ -222,10 +232,13 @@ Permission to use, copy, modify, and/or distribute this software for any purpose
 
 THE SOFTWARE IS PROVIDED “AS IS” AND ISC DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL ISC BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ```
+
 ### NCP
+
 MIT License
 
 Copyright (C) 2011 by Charlie McConnell
+
 ```
 MIT License
 

@@ -1,48 +1,60 @@
-var ncp = require('./ncp/ncp.js');
+var ncp = require("./ncp/ncp.js");
 var fs = require("fs");
 exports.main = function (modules, dirname, clone) {
-	for (module of modules.moduleList) { // for each module
-		let toClone = true // clone by default
-		var url;
-		if (module.startsWith("gh://")) { // github stuff
-			url = module.replace("gh://", "git://github.com/");
-			url = `${url}.git`;
-		} else if (module.startsWith("gl://")) { // gitlab stuff
-			url = module.replace("gl://", "git://gitlab.com/");
-			url = `${url}.git`;
-		} else if (module.startsWith("bb://")) { // bitbucket stuff
-			f = module.split("/");
-			url = `https://${f[2]}@bitbucket.org/${module.replace("bb://", "")}`;
-		} else if (module.startsWith("local://")) { // local modules
-			let toClone = false // don't clone
-			url = "";
-		} else if (module.startsWith("npm://")) { // npm modules
-			let toClone = false // don't clone
-			fs.rmdirSync(
-				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`, { recursive: true }
-			);
-			ncp(
-				`${dirname}/node_modules/${module.replace("npm://", "")}`,
-				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`, function (err) {
-					if (err) {
-						return console.error(err);
-					}
-					console.log('done!');
-				}
-			);
-			url = "";
-		}
-		directory = `${dirname}/modules/${module}`;
-		if (toClone) { // clone it
-			async function asnc() {
-				await clone(
-					url,
-					directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
-					{ shallow: true },
-					function () { }
-				);
-			}
-			asnc();
-		}
-	}
-}
+  for (module of modules.moduleList) {
+    // for each module
+    let toClone = true; // clone by default
+    var url;
+    if (module.startsWith("gh://")) {
+      // github stuff
+      url = module.replace("gh://", "git://github.com/");
+      url = `${url}.git`;
+    } else if (module.startsWith("gl://")) {
+      // gitlab stuff
+      url = module.replace("gl://", "git://gitlab.com/");
+      url = `${url}.git`;
+    } else if (module.startsWith("bb://")) {
+      // bitbucket stuff
+      f = module.split("/");
+      url = `https://${f[2]}@bitbucket.org/${module.replace("bb://", "")}`;
+    } else if (module.startsWith("local://")) {
+      // local modules
+      let toClone = false; // don't clone
+      url = "";
+    } else if (module.startsWith("npm://")) {
+      // npm modules
+      let toClone = false; // don't clone
+      fs.rmdirSync(
+        `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
+        { recursive: true }
+      );
+      ncp(
+        `${dirname}/node_modules/${module.replace("npm://", "")}`,
+        `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
+        function (err) {
+          if (err) {
+            return console.error(err);
+          }
+          console.log("done!");
+        }
+      );
+      url = "";
+    }
+    directory = `${dirname}/modules/${module}`;
+    if (toClone) {
+      // clone it
+      async function asnc() {
+        await clone(
+          url,
+          directory
+            .replace("gh://", "")
+            .replace("bb://", "")
+            .replace("gl://", ""),
+          { shallow: true },
+          function () {}
+        );
+      }
+      asnc();
+    }
+  }
+};

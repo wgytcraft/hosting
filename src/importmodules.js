@@ -2,8 +2,8 @@ var ncp = require('./ncp/ncp.js');
 var fs = require("fs");
 exports.main = function (modules, dirname, clone) {
 	for (module of modules.moduleList) { // for each module
-		let toClone = true // clone by default
-		var url;
+		let toClone = true; // clone by default
+		var url ="";
 		if (module.startsWith("gh://")) { // github stuff
 			url = module.replace("gh://", "git://github.com/");
 			url = `${url}.git`;
@@ -11,13 +11,12 @@ exports.main = function (modules, dirname, clone) {
 			url = module.replace("gl://", "git://gitlab.com/");
 			url = `${url}.git`;
 		} else if (module.startsWith("bb://")) { // bitbucket stuff
-			f = module.split("/");
+			var f = module.split("/");
 			url = `https://${f[2]}@bitbucket.org/${module.replace("bb://", "")}`;
 		} else if (module.startsWith("local://")) { // local modules
-			let toClone = false // don't clone
-			url = "";
+			let toClone = false; // don't clone
 		} else if (module.startsWith("npm://")) { // npm modules
-			let toClone = false // don't clone
+			let toClone = false; // don't clone
 			fs.rmdirSync(
 				`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`, { recursive: true }
 			);
@@ -30,11 +29,10 @@ exports.main = function (modules, dirname, clone) {
 					console.log('done!');
 				}
 			);
-			url = "";
 		}
-		directory = `${dirname}/modules/${module}`;
+		var directory = `${dirname}/modules/${module}`;
 		if (toClone) { // clone it
-			async function asnc() {
+			async function asnc(url,directory) {
 				await clone(
 					url,
 					directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
@@ -42,7 +40,7 @@ exports.main = function (modules, dirname, clone) {
 					function () { }
 				);
 			}
-			asnc();
+			asnc(url,directory);
 		}
 	}
-}
+};

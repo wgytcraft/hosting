@@ -1,6 +1,9 @@
 var ncp = require("./ncp/ncp.js");
 var fs = require("fs");
 exports.main = function (modules, dirname, clone) {
+  async function asnc(url, directory) {
+    await clone(url,directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),{ shallow: true },function () {});
+  }
   for (module of modules.moduleList) {
     // for each module
     let toClone = true; // clone by default
@@ -23,10 +26,7 @@ exports.main = function (modules, dirname, clone) {
     } else if (module.startsWith("npm://")) {
       // npm modules
       let toClone = false; // don't clone
-      fs.rmdirSync(
-        `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
-        { recursive: true }
-      );
+      fs.rmdirSync(`${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,{ recursive: true });
       ncp(
         `${dirname}/node_modules/${module.replace("npm://", "")}`,
         `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
@@ -41,17 +41,6 @@ exports.main = function (modules, dirname, clone) {
     var directory = `${dirname}/modules/${module}`;
     if (toClone) {
       // clone it
-      async function asnc(url, directory) {
-        await clone(
-          url,
-          directory
-            .replace("gh://", "")
-            .replace("bb://", "")
-            .replace("gl://", ""),
-          { shallow: true },
-          function () {}
-        );
-      }
       asnc(url, directory);
     }
   }

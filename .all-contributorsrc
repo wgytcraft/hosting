@@ -29,7 +29,11 @@
       "profile": "https://retronbv.github.io",
       "contributions": [
         "code",
-        "ideas"
+        "ideas",
+        "bug",
+        "review",
+        "maintenance",
+        "test"
       ]
     },
     {

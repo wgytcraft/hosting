@@ -1,5 +1,5 @@
 {
-  "name": "@wgytcraft/hosting",
+  "name": "@1hostjs/hosting",
   "version": "1.1.1",
   "description": "The easiest way to host websites",
   "main": "src/index.js",

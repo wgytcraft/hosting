@@ -7,7 +7,7 @@
 ### Require the module
 
 ```javascript
-var wgytcraft = require("@1hostjs/hosting").main;
+var 1hostjs = require("@1hostjs/hosting").main;
 ```
 
 ### Use it

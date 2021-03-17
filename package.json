@@ -3,6 +3,8 @@
   "version": "1.1.6",
   "description": "The easiest way to host websites",
   "main": "src/index.js",
+  "dependencies": {
+  },
   "devDependencies": {
     "@types/node": "^14.14.34"
   },

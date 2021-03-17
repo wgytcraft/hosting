@@ -1,7 +1,7 @@
 const fs = require("fs");
-var wgytcraft = require("../src/index.js").main;
+var wgytcraft = require("../dist/index.js").main;
 wgytcraft(
-  JSON.parse(fs.readFileSync("/tests/modules/modules.json")),
+  JSON.parse(fs.readFileSync(__dirname + "/modules/modules.json")),
   __dirname,
   "3000"
 );

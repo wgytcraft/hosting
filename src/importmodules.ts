@@ -1,6 +1,6 @@
-var ncp = require("./ncp/ncp.js");
+var ncp = require("../libs/ncp/ncp.js");
 var fs = require("fs");
-exports.main = function (modules, dirname, clone) {
+exports.main = function (modules: any, dirname: string, clone: any) {
   async function asnc(url, directory) {
     await clone(
       url,
@@ -9,7 +9,7 @@ exports.main = function (modules, dirname, clone) {
       function () {}
     );
   }
-  for (module of modules.moduleList) {
+  for (let module of modules.moduleList) {
     // for each module
     let toClone = true; // clone by default
     var url = "";

@@ -45,7 +45,7 @@ var path = require("path");
 var utils = require("./utils");
 var scopeOptionWarned = false;
 /** @type {string} */
-var _VERSION_STRING = require("../package.json").version;
+var _VERSION_STRING = require("../../package.json").version;
 var _DEFAULT_OPEN_DELIMITER = "<";
 var _DEFAULT_CLOSE_DELIMITER = ">";
 var _DEFAULT_DELIMITER = "%";

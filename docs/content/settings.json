@@ -1,0 +1,17 @@
+{
+  "title": "1host.js Docs",
+  "url": "https://wgytcraft.github.io/",
+  "github": {
+    "repo": "1hostjs/hosting",
+    "apiUrl": "https://api.github.com/repos"
+  },
+  "header": {
+    "logo": true
+  },
+  "twitter": "wgytcraft",
+  "colors": {
+    "primary": "#f63202"
+  },
+  "logo": "/icon.png"
+}
+

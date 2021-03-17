@@ -3,12 +3,15 @@
   "version": "1.1.6",
   "description": "The easiest way to host websites",
   "main": "src/index.js",
-  "dependencies": {},
   "devDependencies": {
-    "@types/node": "^14.14.34"
+    "@types/node": "^14.14.34",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0"
   },
   "scripts": {
-    "test": "node tests/test.js"
+    "test": "node tests/test.js",
+    "lint": "eslint \"src/**/*.js\" --fix"
   },
   "keywords": [
     "hosting",

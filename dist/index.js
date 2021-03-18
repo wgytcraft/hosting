@@ -6,7 +6,7 @@ modules.exports = function (modules, dirname, port) {
   var clone = require("../libs/git-clone/index.js"); // clone from git sources
   var mime = require("../libs/mime/mime.js"); // mime library
   var version = "1.1.0"; // verison number
-  var fs = require('fs')
+  var fs = require("fs");
   importmodules(modules, dirname, clone); // import the modules
   var error = require(dirname +
     "/modules/" +

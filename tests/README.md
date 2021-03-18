@@ -14,10 +14,7 @@
 ```json
 {
   "version": "1.1.0-beta",
-  "moduleList": [
-    "gh://1hostjs/errors",
-    "gh://1hostjs/hello-world-template"
-  ],
+  "moduleList": ["gh://1hostjs/errors", "gh://1hostjs/hello-world-template"],
   "errorHandler": {
     "module": "1hostjs/errors",
     "config": {}

@@ -1,4 +1,4 @@
-# Wgytcraft tests
+# 1hostjs tests
 
 ## How to test a module
 
@@ -15,17 +15,17 @@
 {
   "version": "1.1.0-beta",
   "moduleList": [
-    "gh://wgytcraft/errors",
-    "gh://wgytcraft/hello-world-template"
+    "gh://1hostjs/errors",
+    "gh://1hostjs/hello-world-template"
   ],
   "errorHandler": {
-    "module": "wgytcraft/errors",
+    "module": "1hostjs/errors",
     "config": {}
   },
   "website": ["test.wgyt.tk"],
   "websiteData": {
     "test.wgyt.tk": {
-      "module": "wgytcraft/hello-world-template",
+      "module": "1hostjs/hello-world-template",
       "config": {}
     }
   }

@@ -2,7 +2,6 @@
 name: Feature request
 about: Use this template for tracking new features.
 title: "[Feature Request]"
-labels: tracking issue, needs triage
 assignees: retronbv, GrahamSH-LLK, wgyt
 ---
 

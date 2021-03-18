@@ -5,6 +5,7 @@ modules.exports = function (modules: any, dirname: string, port: number) {
   const ejs = require("../libs/ejs/ejs.js"); // templating engine
   const clone = require("../libs/git-clone/index.js"); // clone from git sources
   const mime = require("../libs/mime/mime.js"); // mime library
+  const fs = require('fs')
   const version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
   const error = require(dirname +

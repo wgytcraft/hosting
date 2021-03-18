@@ -14,4 +14,4 @@ Resolves #
 
 **Tests**
 
-<!-- Have you tested this pull request's changes? If so, how? -->
+<!-- Have you tested this pull request? If so, how? -->

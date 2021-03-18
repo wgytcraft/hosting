@@ -7,7 +7,7 @@
 ### Require the module
 
 ```javascript
-var onehostjs = require("@1hostjs/hosting").main;
+var onehostjs = require("@1hostjs/hosting");
 ```
 
 ### Use it

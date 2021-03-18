@@ -7,14 +7,14 @@
 ### Require the module
 
 ```javascript
-var 1hostjs = require("@1hostjs/hosting").main;
+var onehostjs = require("@1hostjs/hosting");
 ```
 
 ### Use it
 
 ```javascript
-wgytcraft(modulesJson, dirname);
-// modulesJson should be the modules.json file for wgytcraft
+onehostjs(modulesJson, dirname);
+// modulesJson should be the modules.json file for 1hostjs
 // dirname should be __dirname
 ```
 

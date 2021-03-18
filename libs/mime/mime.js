@@ -1,5 +1,5 @@
-var path = require('path');
-var fs = require('fs');
+var path = require("path");
+var fs = require("fs");
 
 function Mime() {
   // Map of extension -> mime type
@@ -23,8 +23,15 @@ Mime.prototype.define = function (map) {
     var exts = map[type];
     for (var i = 0; i < exts.length; i++) {
       if (process.env.DEBUG_MIME && this.types[exts[i]]) {
-        console.warn((this._loading || "define()").replace(/.*\//, ''), 'changes "' + exts[i] + '" extension type from ' +
-          this.types[exts[i]] + ' to ' + type);
+        console.warn(
+          (this._loading || "define()").replace(/.*\//, ""),
+          'changes "' +
+            exts[i] +
+            '" extension type from ' +
+            this.types[exts[i]] +
+            " to " +
+            type
+        );
       }
 
       this.types[exts[i]] = type;
@@ -45,16 +52,16 @@ Mime.prototype.define = function (map) {
  *
  * @param file (String) path of file to load.
  */
-Mime.prototype.load = function(file) {
+Mime.prototype.load = function (file) {
   this._loading = file;
   // Read file and split into lines
   var map = {},
-      content = fs.readFileSync(file, 'ascii'),
-      lines = content.split(/[\r\n]+/);
+    content = fs.readFileSync(file, "ascii"),
+    lines = content.split(/[\r\n]+/);
 
-  lines.forEach(function(line) {
+  lines.forEach(function (line) {
     // Clean up whitespace/comments, and split into fields
-    var fields = line.replace(/\s*#.*|^\s*|\s*$/g, '').split(/\s+/);
+    var fields = line.replace(/\s*#.*|^\s*|\s*$/g, "").split(/\s+/);
     map[fields.shift()] = fields;
   });
 
@@ -66,8 +73,8 @@ Mime.prototype.load = function(file) {
 /**
  * Lookup a mime type based on extension
  */
-Mime.prototype.lookup = function(path, fallback) {
-  var ext = path.replace(/^.*[\.\/\\]/, '').toLowerCase();
+Mime.prototype.lookup = function (path, fallback) {
+  var ext = path.replace(/^.*[\.\/\\]/, "").toLowerCase();
 
   return this.types[ext] || fallback || this.default_type;
 };
@@ -75,7 +82,7 @@ Mime.prototype.lookup = function(path, fallback) {
 /**
  * Return file extension associated with a mime type
  */
-Mime.prototype.extension = function(mimeType) {
+Mime.prototype.extension = function (mimeType) {
   var type = mimeType.match(/^\s*([^;\s]*)(?:;|\s|$)/)[1].toLowerCase();
   return this.extensions[type];
 };
@@ -84,10 +91,10 @@ Mime.prototype.extension = function(mimeType) {
 var mime = new Mime();
 
 // Define built-in types
-mime.define(require('./types.json'));
+mime.define(require("./types.json"));
 
 // Default type
-mime.default_type = mime.lookup('bin');
+mime.default_type = mime.lookup("bin");
 
 //
 // Additional API specific to the default instance
@@ -99,10 +106,12 @@ mime.Mime = Mime;
  * Lookup a charset based on mime type.
  */
 mime.charsets = {
-  lookup: function(mimeType, fallback) {
+  lookup: function (mimeType, fallback) {
     // Assume text types are utf8
-    return (/^text\/|^application\/(javascript|json)/).test(mimeType) ? 'UTF-8' : fallback;
-  }
+    return /^text\/|^application\/(javascript|json)/.test(mimeType)
+      ? "UTF-8"
+      : fallback;
+  },
 };
 
 module.exports = mime;

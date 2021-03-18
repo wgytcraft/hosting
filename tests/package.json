@@ -12,6 +12,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wgytcraft/hello-world-template": "^1.0.0"
+    "@1hostjs/hello-world-template": "^1.0.0"
   }
 }

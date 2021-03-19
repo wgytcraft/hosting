@@ -1,4 +1,4 @@
-modules.exports = function (modules: any, dirname: string, port: number) {
+module.exports = function (modules: any, dirname: string, port: number) {
   const importmodules = require("./importmodules.js").main; // this is the function that imports the modules
   const servesite = require("./servesite.js").main; // this is the function that uses the modules to serve the site
   const http = require("http"); // http server

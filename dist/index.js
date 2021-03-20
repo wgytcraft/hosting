@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = function (modules, dirname, port) {
   var importmodules = require("./importmodules.js"); // this is the function that imports the modules
   var servesite = require("./servesite.js"); // this is the function that uses the modules to serve the site
@@ -6,16 +7,22 @@ module.exports = function (modules, dirname, port) {
   var clone = require("../libs/git-clone/index.js"); // clone from git sources
   var mime = require("../libs/mime/mime.js"); // mime library
   var fs = require("fs");
+  var path = require("path");
   var version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
-  var error = require(dirname +
-    "/modules/" +
-    modules.errorHandler.module +
-    "/index.js"); // get the error handler
+  var error = path.join(
+    dirname,
+    "..",
+    "modules",
+    "..",
+    modules.errorHandler.module,
+    "..",
+    "index.js"
+  ); // get the error handler
   http
     .createServer(function (req, res) {
       var host = req.headers.host; // this is the host
-      res.setHeader("X-Powered-By", "nodejs@wgytcraft/hosting");
+      res.setHeader("X-Powered-By", "1hostjs");
       res.send = function (status, headers, data) {
         res.writeHead(status, headers);
         res.write(data);

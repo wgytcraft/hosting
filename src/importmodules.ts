@@ -1,6 +1,6 @@
 var ncp = require("../libs/ncp/ncp.js");
 var fs = require("fs");
-exports.main = function (modules: any, dirname: string, clone: any) {
+module.exports = function (modules: any, dirname: string, clone: any) {
   async function asnc(url, directory) {
     await clone(
       url,

@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "lib": ["es2015", "dom"],
     "target": "es5",
     "module": "commonjs",
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["src/**.**"],
-  "exclude": ["src/ejs/**", "src/ncp/**", "src/git-clone/**"]
+  "include": ["src/**.**"]
 }

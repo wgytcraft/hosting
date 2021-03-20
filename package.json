@@ -19,7 +19,7 @@
     "server",
     "http"
   ],
-  "eslintConfig"{
+  "eslintConfig":{
     "env": {
        "browser": true,
        "commonjs": true,

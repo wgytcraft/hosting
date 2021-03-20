@@ -24,6 +24,7 @@ jobs:
       run:
         shell: bash
     steps:
+      - timeout-minutes: 1
       - uses: actions/checkout@v2
       - name: Setup node
         uses: actions/setup-node@v2
@@ -31,4 +32,4 @@ jobs:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
       - run: npm install
-      - run: timeout 10 npm test
+      - run: npm test

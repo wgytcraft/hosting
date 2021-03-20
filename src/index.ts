@@ -22,7 +22,7 @@ module.exports = function (modules: any, dirname: string, port: number) {
   http
     .createServer(function (req, res) {
       const host = req.headers.host; // this is the host
-      res.setHeader("X-Powered-By", "nodejs@wgytcraft/hosting");
+      res.setHeader("X-Powered-By", "1hostjs");
       res.send = function (status, headers, data) {
         res.writeHead(status, headers);
         res.write(data);

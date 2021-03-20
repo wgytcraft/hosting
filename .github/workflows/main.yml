@@ -33,3 +33,4 @@ jobs:
           architecture: ${{ matrix.architecture }}
       - run: npm install
       - run: npm test
+      

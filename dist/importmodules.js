@@ -133,7 +133,7 @@ var __generator =
   };
 var ncp = require("../libs/ncp/ncp.js");
 var fs = require("fs");
-exports.main = function (modules, dirname, clone) {
+module.exports = function (modules, dirname, clone) {
   function asnc(url, directory) {
     return __awaiter(this, void 0, void 0, function () {
       return __generator(this, function (_a) {

@@ -1,6 +1,6 @@
 module.exports = function (modules: any, dirname: string, port: number) {
-  const importmodules = require("./importmodules.js").main; // this is the function that imports the modules
-  const servesite = require("./servesite.js").main; // this is the function that uses the modules to serve the site
+  const importmodules = require("./importmodules.js"); // this is the function that imports the modules
+  const servesite = require("./servesite.js"); // this is the function that uses the modules to serve the site
   const http = require("http"); // http server
   const ejs = require("../libs/ejs/ejs.js"); // templating engine
   const clone = require("../libs/git-clone/index.js"); // clone from git sources

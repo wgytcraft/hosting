@@ -1,4 +1,4 @@
-exports.main = function (
+module.exports = function (
   host,
   res,
   req,
@@ -12,8 +12,10 @@ exports.main = function (
     // if the site is in modulesjson
     var module = modules.websiteData[host].module;
     var config = modules.websiteData[host].config;
+    var globalConfig = modules.globalConfig;
+    var ultimateConfig = Object.assign(globalConfig, config);
     var sitemodule = require(dirname + "/modules/" + module + "/index.js");
-    sitemodule(host, res, req, error, version, ejs, config); // serve the site
+    sitemodule(host, res, req, error, version, ejs, ultimateConfig); // serve the site
   } else {
     // otherwise throw error
     error(

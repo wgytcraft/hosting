@@ -1,12 +1,12 @@
 module.exports = function (modules, dirname, port) {
-  var importmodules = require("./importmodules.js").main; // this is the function that imports the modules
-  var servesite = require("./servesite.js").main; // this is the function that uses the modules to serve the site
+  var importmodules = require("./importmodules.js"); // this is the function that imports the modules
+  var servesite = require("./servesite.js"); // this is the function that uses the modules to serve the site
   var http = require("http"); // http server
   var ejs = require("../libs/ejs/ejs.js"); // templating engine
   var clone = require("../libs/git-clone/index.js"); // clone from git sources
   var mime = require("../libs/mime/mime.js"); // mime library
-  var version = "1.1.0"; // verison number
   var fs = require("fs");
+  var version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
   var error = require(dirname +
     "/modules/" +
@@ -70,3 +70,4 @@ module.exports = function (modules, dirname, port) {
     })
     .listen(port);
 };
+//# sourceMappingURL=index.js.map

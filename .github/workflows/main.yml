@@ -31,5 +31,4 @@ jobs:
           node-version: ${{ matrix.node_version }}
           architecture: ${{ matrix.architecture }}
       - run: npm install
-      - run: npm lint
       - run: timeout 10 npm test

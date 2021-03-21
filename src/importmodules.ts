@@ -1,18 +1,21 @@
-var ncp = require("../libs/ncp/ncp.js");
-var fs = require("fs");
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
+const ncp = require("../libs/ncp/ncp.js");
+const fs = require("fs");
 module.exports = function (modules: any, dirname: string, clone: any) {
   async function asnc(url, directory) {
     await clone(
       url,
       directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""),
       { shallow: true },
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       function () {}
     );
   }
-  for (let module of modules.moduleList) {
+  for (const module of modules.moduleList) {
     // for each module
-    let toClone = true; // clone by default
-    var url = "";
+    const toClone = true; // clone by default
+    let url = "";
     if (module.startsWith("gh://")) {
       // github stuff
       url = module.replace("gh://", "git://github.com/");
@@ -23,14 +26,14 @@ module.exports = function (modules: any, dirname: string, clone: any) {
       url = `${url}.git`;
     } else if (module.startsWith("bb://")) {
       // bitbucket stuff
-      var f = module.split("/");
+      const f = module.split("/");
       url = `https://${f[2]}@bitbucket.org/${module.replace("bb://", "")}`;
     } else if (module.startsWith("local://")) {
       // local modules
-      let toClone = false; // don't clone
+      const toClone = false; // don't clone
     } else if (module.startsWith("npm://")) {
       // npm modules
-      let toClone = false; // don't clone
+      const toClone = false; // don't clone
       fs.rmdirSync(
         `${dirname}/modules/${module.replace("@", "").replace("npm://", "")}`,
         { recursive: true }
@@ -46,7 +49,7 @@ module.exports = function (modules: any, dirname: string, clone: any) {
         }
       );
     }
-    var directory = `${dirname}/modules/${module}`;
+    const directory = `${dirname}/modules/${module}`;
     if (toClone) {
       // clone it
       asnc(url, directory);

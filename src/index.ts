@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = function (modules: any, dirname: string, port: number) {
   const importmodules = require("./importmodules.js"); // this is the function that imports the modules
@@ -10,7 +11,7 @@ module.exports = function (modules: any, dirname: string, port: number) {
   const path = require("path");
   const version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
-  let error = path.join(
+  const error = path.join(
     dirname,
     "..",
     "modules",

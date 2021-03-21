@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = function (modules, dirname, port) {
   var importmodules = require("./importmodules.js"); // this is the function that imports the modules

@@ -131,6 +131,8 @@ var __generator =
       return { value: op[0] ? op[1] : void 0, done: true };
     }
   };
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 var ncp = require("../libs/ncp/ncp.js");
 var fs = require("fs");
 module.exports = function (modules, dirname, clone) {
@@ -148,6 +150,7 @@ module.exports = function (modules, dirname, clone) {
                   .replace("bb://", "")
                   .replace("gl://", ""),
                 { shallow: true },
+                // eslint-disable-next-line @typescript-eslint/no-empty-function
                 function () {}
               ),
             ];

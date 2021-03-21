@@ -34,6 +34,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-var-requires */
 var ncp = require("../libs/ncp/ncp.js");
 var fs = require("fs");
 module.exports = function (modules, dirname, clone) {
@@ -41,7 +43,9 @@ module.exports = function (modules, dirname, clone) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, clone(url, directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""), { shallow: true }, function () { })];
+                    case 0: return [4 /*yield*/, clone(url, directory.replace("gh://", "").replace("bb://", "").replace("gl://", ""), { shallow: true }, 
+                        // eslint-disable-next-line @typescript-eslint/no-empty-function
+                        function () { })];
                     case 1:
                         _a.sent();
                         return [2 /*return*/];

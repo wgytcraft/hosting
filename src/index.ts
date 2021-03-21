@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = function (modules: any, dirname: string, port: number) {
   const importmodules = require("./importmodules.js"); // this is the function that imports the modules
@@ -7,10 +8,18 @@ module.exports = function (modules: any, dirname: string, port: number) {
   const clone = require("../libs/git-clone/index.js"); // clone from git sources
   const mime = require("../libs/mime/mime.js"); // mime library
   const fs = require("fs");
-  const path = require('path')
+  const path = require("path");
   const version = "1.1.0"; // verison number
   importmodules(modules, dirname, clone); // import the modules
-  let error = path.join(dirname,"..","modules","..",modules.errorHandler.module,"..","index.js"); // get the error handler
+  const error = path.join(
+    dirname,
+    "..",
+    "modules",
+    "..",
+    modules.errorHandler.module,
+    "..",
+    "index.js"
+  ); // get the error handler
   http
     .createServer(function (req, res) {
       const host = req.headers.host; // this is the host

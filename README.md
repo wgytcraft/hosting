@@ -1,6 +1,5 @@
 # @1hostjs/hosting - _The easiest way to host websites_
 
-
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/1hostjs/hosting/main?logo=github&logoColor=white&style=flat-square&color=F63202)  
 ![Codacy grade](https://img.shields.io/codacy/grade/aa8004662996446e9dd30ff0d1c71c5b?logo=codacy&logoColor=white&style=flat-square&color=F63202)  
 ![GitHub language count](https://img.shields.io/github/languages/count/1hostjs/hosting?logo=github&logoColor=white&style=flat-square&color=red)  
@@ -28,7 +27,8 @@
 ![Website](https://img.shields.io/website?color=F63202&down_color=F63202&down_message=down&label=docs&logo=nuxt.js&logoColor=white&style=flat-square&up_color=F63202&up_message=are%20up&url=https%3A%2F%2F1host.js.org)  
 ![Github All Contributors](https://img.shields.io/github/all-contributors/1hostjs/hosting/main?color=F63202&logo=github&logoColor=white&style=flat-square)  
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/1hostjs/hosting/latest/main?color=F63202&logo=github&logoColor=white&style=flat-square)  
-![GitHub commit activity](https://img.shields.io/github/commit-activity/w/1hostjs/hosting?color=F63202&logo=github&logoColor=white&style=flat-square)  
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/1hostjs/hosting?color=F63202&logo=github&logoColor=white&style=flat-square)
+
 ## How to use
 
 ### Require the module

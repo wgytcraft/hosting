@@ -27,7 +27,7 @@
 ![NPM](https://img.shields.io/npm/l/@1hostjs%252Fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  
 ![npm](https://img.shields.io/npm/v/@1hostjs%252fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  
 ![Website](https://img.shields.io/website?color=F63202&down_color=F63202&down_message=down&label=docs&logo=nuxt.js&logoColor=white&style=flat-square&up_color=F63202&up_message=are%20up&url=https%3A%2F%2F1host.js.org)  
-![Twitter Follow](https://img.shields.io/twitter/follow/wgytcraft?color=F63202&logo=twitter&logoColor=white&style=flat-square)  
+![Twitter Follow](https://img.shields.io/twitter/follow/wgytcraft?color=F63202&logo=twitter&logoColor=white&style=flat-square)
 
 ## How to use
 

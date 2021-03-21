@@ -24,7 +24,7 @@
 ![Github All Contributors](https://img.shields.io/github/all-contributors/1hostjs/hosting/main?color=F63202&logo=github&logoColor=white&style=flat-square)  
 ![GitHub commits since tagged version](https://img.shields.io/github/commits-since/1hostjs/hosting/latest/main?color=F63202&logo=github&logoColor=white&style=flat-square)  
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/1hostjs/hosting?color=F63202&logo=github&logoColor=white&style=flat-square)
-![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@1hostjs/hosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  ![npm](https://img.shields.io/npm/dt/@1hostjs/hosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  ![NPM](https://img.shields.io/npm/l/@1hostjs%252Fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  ![npm](https://img.shields.io/npm/v/@1hostjs%252fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square)  
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@1hostjs/hosting?color=F63202&logo=npm&logoColor=white&style=flat-square) ![npm](https://img.shields.io/npm/dt/@1hostjs/hosting?color=F63202&logo=npm&logoColor=white&style=flat-square) ![NPM](https://img.shields.io/npm/l/@1hostjs%252Fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square) ![npm](https://img.shields.io/npm/v/@1hostjs%252fhosting?color=F63202&logo=npm&logoColor=white&style=flat-square)
 
 ## How to use
 

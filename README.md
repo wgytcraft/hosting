@@ -1,7 +1,6 @@
 # @1hostjs/hosting - _The easiest way to host websites_
-
-![GitHub branch checks state](https://img.shields.io/github/checks-status/1hostjs/hosting/main?logo=github&logoColor=white&style=flat-square&color=F63202)  
 ![Codacy grade](https://img.shields.io/codacy/grade/aa8004662996446e9dd30ff0d1c71c5b?logo=codacy&logoColor=white&style=flat-square&color=F63202)  
+![GitHub branch checks state](https://img.shields.io/github/checks-status/1hostjs/hosting/main?logo=github&logoColor=white&style=flat-square&color=F63202)  
 ![GitHub language count](https://img.shields.io/github/languages/count/1hostjs/hosting?logo=github&logoColor=white&style=flat-square&color=red)  
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/1hostjs/hosting?color=F63202&logo=github&logoColor=white&style=flat-square)  
 ![Discord](https://img.shields.io/discord/815203873324662865?color=F63202&logo=discord&logoColor=white&style=flat-square)  

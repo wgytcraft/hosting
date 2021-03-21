@@ -14,7 +14,7 @@
     "test": "node tests/test.js",
     "lint": "eslint \"src/**/*.ts\" --fix",
     "format": "npx prettier --write .",
-    "build":"tsc"
+    "build": "tsc"
   },
   "keywords": [
     "hosting",

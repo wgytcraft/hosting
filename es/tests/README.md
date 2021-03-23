@@ -2,14 +2,14 @@
 
 ## Cómo probar un módulo
 
-- editar modules / modules.json para probar diferentes módulos
-- ejecute test.js y vaya a http: // localhost: 3000
-- busca las cosas correctas
+-  editar modules / modules.json para probar diferentes módulos
+-  ejecute test.js y vaya a http: // localhost: 3000
+-  busca las cosas correctas
 
 ## probar un lanzamiento
 
-- obtener la liberación
-- hacer módulos / módulos.json
+-  obtener la liberación
+-  hacer módulos / módulos.json
 
 ```json
 {
@@ -31,6 +31,6 @@
 
 reemplazando test.wgyt.tk con el dominio en el que estás probando
 
-- ejecute test.js y vaya a http: // localhost: 3000
-- busca las cosas correctas
-- publicar
+-  ejecute test.js y vaya a http: // localhost: 3000
+-  busca las cosas correctas
+-  publicar

@@ -4,43 +4,43 @@
   "description": "Help for 1host.js",
   "icons": [
     {
-      "src": "/_nuxt/icons/icon_64x64.ef05fd.png",
+      "src": "/_nuxt/icons/icon_64x64.dc871e.png",
       "sizes": "64x64",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_120x120.ef05fd.png",
+      "src": "/_nuxt/icons/icon_120x120.dc871e.png",
       "sizes": "120x120",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_144x144.ef05fd.png",
+      "src": "/_nuxt/icons/icon_144x144.dc871e.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_152x152.ef05fd.png",
+      "src": "/_nuxt/icons/icon_152x152.dc871e.png",
       "sizes": "152x152",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_192x192.ef05fd.png",
+      "src": "/_nuxt/icons/icon_192x192.dc871e.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_384x384.ef05fd.png",
+      "src": "/_nuxt/icons/icon_384x384.dc871e.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/_nuxt/icons/icon_512x512.ef05fd.png",
+      "src": "/_nuxt/icons/icon_512x512.dc871e.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

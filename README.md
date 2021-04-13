@@ -1,8 +1,31 @@
 # @1hostjs/hosting-1.0.0 - _The easiest way to host websites [deprecated version]_
 ## ANNOUNCEMENT: This repository is only open for security patches because version 2.x.x is released. This repo will be archived on May 6th, the EOL of 1.x.x. The new repo can be found [here](https://github.com/1hostjs/hosting). Join [our Discord server](https://discord.gg/NcfrvkEy6A) and read [this message](https://discord.com/channels/815203873324662865/815203873324662868/831507860847460372) for more info.
 
-**All data except for the contributor list (nice to keep credits) has been removed since you can no longer install 1.x.x.**
+### Require the module
 
+```javascript
+var onehostjs = require("@1hostjs/hosting@1.1.6");
+```
+
+### Use it
+
+```javascript
+onehostjs(modulesJson, dirname);
+// modulesJson should be the modules.json file for 1hostjs
+// dirname should be __dirname
+```
+
+## Folder Structure
+
+```text
+📦 1hostjs/hosting
+ ┣ 📂 tests # Folder for tests
+ ┣ 📂 dist # Actual source code
+ ┣ 📂 .github # Community health files
+ ┣ 📜 LICENSE
+ ┣ 📜 NOTICE.md
+ ┗ 📜 README.md
+```
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):

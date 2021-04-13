@@ -1,5 +1,5 @@
 # @1hostjs/hosting-1.0.0 - _The easiest way to host websites [deprecated version]_
-## ANNOUNCEMENT: This repository is only open for security patches because version 2.x.x is released. This repo will be archived on May 6th, the EOL of 1.x.x. The new repo can be found [here](https://github.com/1hostjs/hosting). Join [our Discord server](https://discord.gg/NcfrvkEy6A) and read [this message](https://discord.com/channels/815203873324662865/815203873324662868/831507860847460372) for more info.
+## ANNOUNCEMENT: This repository is only open for security patches because version 2.x.x is released. This repo will be archived on May 6th, the EOL of 1.x.x. The new repo can be found [here](https://github.com/1hostjs/hosting). See [this repo's security policy](https://github.com/1hostjs/hosting-1.0.0/security/policy) for more info.
 
 ### Require the module
 
@@ -26,7 +26,7 @@ onehostjs(modulesJson, dirname);
  ┣ 📜 NOTICE.md
  ┗ 📜 README.md
 ```
-## Contributors ✨
+## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
@@ -48,4 +48,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-The 1host.js project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome! Add yourself to the list [here](https://github.com/1hostjs/hosting/issues/9).
+The 1host.js project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification.

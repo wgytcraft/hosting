@@ -9,16 +9,7 @@ category: "Usage"
 - Add the following code:
 
 ```javascript
-module.exports = function (
-  host,
-  res,
-  req,
-  errornumber,
-  errordesc,
-  version,
-  ejs,
-  options
-) {
+module.exports = function (host, req, res, error, version, ejs) {
   // ...
 };
 ```

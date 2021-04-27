@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-var-requires */
 module.exports = function (modules, dirname, port) {
+  console.warn("1.x.x isn't getting any support past this version, please update to 2.0.0 and use https://github.com/1hostjs/1.0compatibilitylayer");
   var importmodules = require("./importmodules.js"); // this is the function that imports the modules
   var servesite = require("./servesite.js"); // this is the function that uses the modules to serve the site
   var http = require("http"); // http server
